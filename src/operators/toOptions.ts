@@ -1,13 +1,10 @@
 import { map, Observable, pipe, UnaryFunction } from "rxjs";
 import { map as _map } from "lodash";
-import { ReactNode, ReactText } from "react";
-
-type Input = Record<string, ReactText>;
-
-type Option = { label: ReactNode; value: ReactNode };
+import { ReactText } from "react";
+import { Input, Option } from "../type";
 
 /**
- *
+ * 转换为Antd的Select需要的Option形式
  * @param fn
  * @return {UnaryFunction<Observable<T[]>, Observable<Option[]>>}
  */
